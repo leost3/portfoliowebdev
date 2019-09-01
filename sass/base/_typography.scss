@@ -8,30 +8,69 @@ body {
 
 
 .heading-primary {
-    color: $color-terciary-dark;
+    color: $color-terciary-light;
     text-transform: uppercase;
     font-size: 10rem;
     padding: 0%;
     position: relative;
     animation: moveRight 2s;
+    letter-spacing: 15px;
 
     &-main {
         margin-top: 0%;
         display: block;
-        color: white;
+        color: $color-terciary-dark;
         position: absolute;
         top: 46%;
         left: 60%;
         font-weight: 900;
+        letter-spacing: 10px;
+
     }
 }
 
-.heading-tertiary {
-    color: $color-terciary-dark;
+
+
+.heading-secondary {
+    color: $color-terciary-light;
     text-transform: uppercase;
     font-size: 5rem;
-    margin-top: 2rem;
+    font-weight: 900;
+}
+
+
+.heading-tertiary {
+    color: $color-terciary-light;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-top: 4rem;
     font-weight: 900;
     animation: moveUp 3s;
+    letter-spacing: 10px;
+}
 
+.heading-quartiary {
+    display: inline-block;
+    color: $color-grey-dark;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase; 
+    border-bottom: 2px solid $color-grey-light-3;
+}
+
+
+.paragraph {
+    color: $color-grey-dark-2;
+    font-weight: 600;
+    font-family: "lato";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+    &__skills {
+        color: $color-terciary-dark;
+    }
+
+    &__location {
+        display: inline-block;
+    }
 }

@@ -1,0 +1,68 @@
+.about {
+    margin-top: -18rem;
+    padding: 25rem 15rem;
+    background: $color-grey-light-1;
+    text-align: center;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__box {
+        width: 50%;
+    }
+
+    &__text {
+        padding:5rem;
+        // background: red;
+
+    }
+    &__skills {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 4rem;
+        &-stacks {
+            display: flex;
+
+            // padding: 5rem 5rem;
+            // background: yellow;
+            
+        }
+        &-stack {
+            width: 100%;
+            border: 1px solid $color-grey-light-3;
+            box-shadow: 0 10    px 10px rgba($color-black, 0.5);
+            padding:1rem 0rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.6s;
+            background: $color-grey-light-2;
+            border-radius: 3px;
+            
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &:hover {
+                transform: translateY(-1.55rem);
+            }
+             
+            &__icons {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+        }
+    }
+
+}
+
+
+.projects {
+    padding: 25rem 15rem;
+    background: $color-grey-light-2;
+    text-align: center;
+}

@@ -8,26 +8,125 @@
       rel="stylesheet"
       href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
     />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/icons/icon-font.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
   </head>
   <body>
-      <nav class="navigation">
-          <ul class="navigation__list">
-              <li class="navigation__list--item"><a href="#" class="navigation__link">Home</a></li>
-              <li class="navigation__list--item"><a href="#" class="navigation__link">About</a></li>
-              <li class="navigation__list--item"><a href="#" class="navigation__link">Project</a></li>
-              <li class="navigation__list--item"><a href="#" class="navigation__link">Contact</a></li>
-          </ul>
-      </nav>
-      <header class="header">
-        <div class="header__text-box">
-          <h1 class="heading-primary">Leonardo <span class="heading-primary-main">Studart</span></h1>
-          <h3 class="heading-tertiary">Web Developer</h3>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list--item">
+          <a href="#" class="navigation__link">Home</a>
+        </li>
+        <li class="navigation__list--item">
+          <a href="#" class="navigation__link">About</a>
+        </li>
+        <li class="navigation__list--item">
+          <a href="#" class="navigation__link">Project</a>
+        </li>
+        <li class="navigation__list--item">
+          <a href="#" class="navigation__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          Leonardo <span class="heading-primary-main">Studart</span>
+        </h1>
+        <h3 class="heading-tertiary">Web Developer</h3>
+      </div>
+    </header>
+    <section class="about">
+      <h2 class="heading-secondary u-margin-bottom-large">
+        About me
+      </h2>
+
+      <div class="about__container">
+        <div class="about__box">
+          <h4 class="heading-quartiary">Who am I?</h4>
+          <div class="about__text">
+            <p class="paragraph u-margin-bottom-medium">
+              Passionate Developer who loves continuously learning and improving.
+              Gratuaded from Lasalle College on Computer Programming Analyst.
+            </p>
+            <p class="paragraph">
+              Currently based in <span class="paragraph__location">
+              <i class="icon icon-basic-geolocalize-01"></i>Montreal, Canada. 
+              </span> 
+            </p>
+          </div>
         </div>
-      </header>
-   
+        <div class="about__skills">
+          <h4 class="heading-quartiary u-margin-bottom-small">Skills</h4>
+          <div class="about__skills-stacks">
+            <div class="about__skills-stack frontend">
+              <p class="paragraph paragraph__skills u-margin-bottom-small">Frontend</p>
+              <div class="about__skills--stacks__icons">
+                <i class="icon devicon-javascript-plain colored"></i>
+                <i class="icon devicon-html5-plain-wordmark colored"></i>
+                <i class="icon devicon-css3-plain-wordmark colored"></i>
+                <i class="icon devicon-sass-original colored"></i>
+                <i class="icon devicon-react-original-wordmark colored"></i>
+                <svg class="icon icon-redux"><use xlink:href="/css/icons/sprite.svg#icon-redux"></use></svg>
+              </div>
+            </div>
+            <div class="about__skills-stack backend">
+                <p class="paragraph paragraph__skills u-margin-bottom-small">Backend</p>
+                <div class="about__skills--stacks__icons">
+                  <i class="icon devicon-csharp-plain colored"></i>
+                  <i class="icon devicon-dot-net-plain-wordmark colored"></i>
+                  <i class="icon devicon-mysql-plain-wordmark colored"></i>
+                  <i class="icon devicon-php-plain colored"></i>
+                </div>
+  
+            </div>
+            <div class="about__skills-stack others">
+                <p class="paragraph paragraph__skills u-margin-bottom-small">General</p>
+                <div class="about__skills--stacks__icons">
+                  <i class="icon devicon-git-plain-wordmark colored"></i>
+                  <i class="icon devicon-github-plain-wordmark colored"></i>
+                  <i class="icon devicon-webpack-plain-wordmark colored"></i>
+                  <i class="icon devicon-babel-plain colored"></i>
+                  <svg class="icon icon-redux"><use xlink:href="/css/icons/sprite.svg#icon-firebase"></use></svg>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <h2 class="heading-secondary u-margin-bottom-large">
+        Projects
+      </h2>
+      <div class="projects-cards-container">
+        <div class="projects-card">
+          <div class="projects-card-image">
+            <img src="/css/img/nbastatsapp-1.JPG" alt="nbastatsapp">
+          </div>
+          <div class="projects-card-icons">
+            <i class="icon devicon-javascript-plain colored"></i>
+            <i class="icon devicon-html5-plain-wordmark colored"></i>
+            <i class="icon devicon-css3-plain-wordmark colored"></i>
+            <i class="icon devicon-webpack-plain-wordmark colored"></i>
+            <i class="icon devicon-babel-plain colored"></i>
+          </div>
+          <div class="projects-card-github">
+            <i class="icon devicon-github-plain-wordmark colored"></i>
+          </div>
+        </div>
+        <div class="projects-textbox">
+          <h3 class="heading-quartiary">About this project</h3>
+          <div class="projects-texbox-details">
+            <p class="pagaraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quos ipsa harum, deleniti quaerat cupiditate nihil totam aspernatur eum mollitia, sit eaque. Explicabo corrupti provident repellat laboriosam nulla, laborum dolore!</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
 

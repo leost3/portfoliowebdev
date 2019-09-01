@@ -1,0 +1,24 @@
+.icon {
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+
+    &.devicon-webpack-plain-wordmark {
+        font-size: 7rem;
+    }
+    &.devicon-mysql-plain-wordmark {
+        font-size: 10rem;
+    }
+
+    &.icon-basic-geolocalize-01 {
+        font-size: 1.5rem;
+        color: $color-red;
+    }
+
+    &:hover {
+        transform: rotateY(180deg)
+    }
+}
+
+ 
