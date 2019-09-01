@@ -1,0 +1,17 @@
+.btn {
+    outline: none;
+    text-decoration: none;
+    transition: all 0.5s;
+    color: black;
+}
+
+.btn__links--container {
+    position: relative;
+}
+
+.btn__link {
+    display: inline-block;
+    &:hover {
+        border-bottom: 5px solid $color-terciary-dark;
+    }
+}

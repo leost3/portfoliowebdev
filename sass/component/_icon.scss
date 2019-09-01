@@ -2,18 +2,26 @@
     font-size: 5rem;
     width: 5rem;
     height: 5rem;
-    margin: 1rem;
+    margin: 2rem;
+    transition: all .7s;
 
     &.devicon-webpack-plain-wordmark {
-        font-size: 7rem;
+        font-size: 5rem;
     }
     &.devicon-mysql-plain-wordmark {
-        font-size: 10rem;
+        font-size: 5rem;
     }
 
     &.icon-basic-geolocalize-01 {
         font-size: 1.5rem;
         color: $color-red;
+    }
+
+    &.icon-basic-eye {
+        position: absolute;
+        font-size: 3rem;
+        top: -10%;
+        left: 0;
     }
 
     &:hover {
