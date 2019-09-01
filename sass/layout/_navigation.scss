@@ -1,0 +1,21 @@
+.navigation {
+    background: grey;
+
+    &__list {
+        display: flex;
+        // justify-content: space-between
+     
+        align-items: center;
+
+        &--item {
+            background: white;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 1rem 2rem;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "portfoliowebdev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss  css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leost3/portfoliowebdev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leost3/portfoliowebdev/issues"
+  },
+  "homepage": "https://github.com/leost3/portfoliowebdev#readme"
+}

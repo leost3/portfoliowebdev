@@ -1,0 +1,19 @@
+.header {
+    height: 94vh;
+    background-image:
+     url("./img/photo-laptopcel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20rem 0;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__text-box {
+        background: transparent;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,88 @@
+html {
+  font-size: 62.5%; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  text-decoration: none; }
+
+.heading-primary {
+  color: #5643fa;
+  text-transform: uppercase;
+  font-size: 10rem;
+  padding: 0%;
+  position: relative;
+  animation: moveRight 2s; }
+  .heading-primary-main {
+    margin-top: 0%;
+    display: block;
+    color: white;
+    position: absolute;
+    top: 46%;
+    left: 60%;
+    font-weight: 900; }
+
+.heading-tertiary {
+  color: #5643fa;
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-top: 2rem;
+  font-weight: 900;
+  animation: moveUp 3s; }
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+.header {
+  height: 94vh;
+  background-image: url("./img/photo-laptopcel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20rem 0;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__text-box {
+    background: transparent;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; }
+
+.navigation {
+  background: grey; }
+  .navigation__list {
+    display: flex;
+    align-items: center; }
+    .navigation__list--item {
+      background: white; }
+  .navigation__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1rem 2rem; }
