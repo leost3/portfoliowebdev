@@ -29,8 +29,6 @@ body {
     }
 }
 
-
-
 .heading-secondary {
     color: $color-terciary-light;
     text-transform: uppercase;
@@ -40,6 +38,7 @@ body {
 
 
 .heading-tertiary {
+    display: inline-block;
     color: $color-terciary-light;
     text-transform: uppercase;
     font-size: 4rem;
@@ -56,22 +55,43 @@ body {
     font-weight: 700;
     text-transform: uppercase; 
     border-bottom: 2px solid $color-grey-light-3;
-    // background: orangered;
+    letter-spacing: 5px;
 }
 
 
 .paragraph {
+    display: inline-block;
     color: $color-grey-dark-2;
-    font-weight: 600;
+    font-weight: 500;
     font-family: "lato";
-    text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
 
     &__skills {
         color: $color-terciary-dark;
+        text-transform: uppercase;
+    }
+
+    &__about {
+        color: $color-white;
+        text-transform: uppercase;
     }
 
     &__location {
         display: inline-block;
     }
+
+    &.light {
+        color: $color-grey-light-3;
+    }
 }
+
+.heading-footer {
+    display: inline-block;
+    color: $color-grey-light-3;
+    font-weight: 900;
+    font-family: "lato";
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+

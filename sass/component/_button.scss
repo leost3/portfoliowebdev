@@ -3,6 +3,10 @@
     text-decoration: none;
     transition: all 0.5s;
     color: black;
+
+    &:hover {
+        transform: scale(1.3);
+    }
 }
 
 .btn__links--container {
@@ -11,7 +15,7 @@
 
 .btn__link {
     display: inline-block;
-    &:hover {
-        border-bottom: 5px solid $color-terciary-dark;
-    }
+    // &:hover {
+    //     border-bottom: 5px solid $color-terciary-dark;
+    // }
 }

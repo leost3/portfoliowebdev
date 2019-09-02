@@ -1,9 +1,10 @@
 .about {
     margin-top: -18rem;
-    padding: 25rem 15rem;
+    padding: 30rem 15rem;
     background: $color-grey-light-1;
     text-align: center;
-    
+    border-bottom: 2px solid $color-grey-light-3;
+    z-index: 5;
     &__container {
         display: flex;
         flex-direction: column;
@@ -63,37 +64,31 @@
 
 
 .projects {
-    padding: 25rem 15rem;
+    // border-top: 2px solid $color-grey-light-3;
+    padding: 20rem 27rem;
     background: $color-grey-light-2;
     text-align: center;
     display: flex;
     flex-direction: column;
-    
+    border-bottom: 2px solid $color-grey-light-3;
+
     &-cards-container {
-        border: 1px solid $color-grey-dark-2;
-        // border-left: 20px solid $color-terciary-dark;
-        // border-left: 20px solid $color-terciary-dark;
-        // border-top-left-radius: 15px;
-        // border-bottom-left-radius: 15px; 
+        border-radius: 15px;
         border: transparent;
-        // border-right: 20px solid $color-terciary-dark;
-        // border-top-right-radius: 15px;
-        // border-bottom-right-radius: 15px; 
-        display: flex;     
-        padding: 0%;   
-   
+        box-shadow: 0 10px 10px rgba($color-black, 0.5);
+        display: flex;   
     }
 
     &-card {
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         border-left: 20px solid $color-terciary-dark;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         position: relative;
-        // padding: 2rem 5rem;
         height: 400px;     
-        flex: 0.6;
+        flex: 0.5;
 
         &:hover .projects-card-github {
             transform: translateX(0);
@@ -104,30 +99,33 @@
         &-image {
             position: relative;
             width: 100%;
+            height: 100%;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba($color-black, 0.5);
+            border-radius: 2px;
+
             & .main {
                 display: block;
                 width: 100%;
+                height: 100%;
                 border: 1px solid black;
             }
-
-            & .secondary {
-                position: absolute;
-                bottom: 0%;
-                right: 0%;
-                width: 45%;
-            }
-
-           
         }
 
         &-icons {
             display: flex;
             margin: 0 auto;
             width: 100%;
-            padding: 1rem;
+            padding: 4rem;
+            
             .icon {
                 margin: 0 auto;
             }
+
+            .icon:hover {
+                transform: rotateY(180deg);
+            }
+
         }
 
         &-github {
@@ -135,28 +133,129 @@
             top: 0%;
             left: 0%;
             transform: translateX(-50%,-50%);
-            height: 80%;
+            height: 70%;
             width: 100%;
-            background: rgba($color-white,0.7);
+            background: rgba($color-white,0.8);
             transform: translateX(-100%);
-            transition: all 0.5s;
+            transition: all 2s;
             opacity: 0;
+            border-radius: 2px;
 
             .btn__container {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
+                width: 100%;
             }
         }
     }
 
     &-textbox {
+        display: flex;
+        flex-direction: column;
         padding: 2rem 5rem;
-        flex: 0.4;
+        flex: 0.5;
         border-right: 20px solid $color-terciary-dark;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px; 
-        box-shadow: 10 0px 10px rgba($color-black, 0.5);
+    }
+}
+
+.connect {
+    padding:  10rem 25rem;
+    text-align: center;
+    background: $color-grey-light-1;
+    border-bottom: 2px solid $color-grey-light-3;
+
+    &__icons {
+        display: flex;
+
+        &--container {
+            padding: 2rem;
+            width: 100%;
+            height: 100%;
+            float: left;
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            margin: 0 auto;
+        }
+        &--container.gmail {
+            border:5px solid red;
+            & p {
+                color: red;
+            }
+        }
+        &--container.facebook {
+            border:5px solid $color-facebook;
+            
+            & p {
+                color: $color-facebook;
+            }
+        }
+        &--container.twitter {
+            border:5px solid $color-twitter; 
+            & p {
+                color: $color-twitter;
+            }       }
+        &--container.linkedin {
+            border:5px solid $color-linkedin;   
+            & p {
+                color: $color-linkedin;
+            }     }
+    }
+}
+
+.aboutme {
+    padding: 10rem;
+    background: $color-grey-dark-1;
+    text-align: center;
+    border-bottom: 2px solid $color-grey-light-3;
+
+
+    & .paragraph.light {
+        text-align: start;
+    }
+    & .paragraph.paragraph__about.u-margin-bottom-small {
+        text-align: start;
+    }
+    &__container {
+        display: flex;
+
+        &-hi {
+            // padding: 5rem;
+            flex: 1;
+            margin-right: 3rem;
+        }
+        &-hello {
+            flex: 0.3;
+            color: $color-grey-light-3;
+
+        }
+    }
+
+    & .icon {
+        color: $color-white;
+    }
+
+    &__list {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        border-left: 1px solid $color-grey-light-2;
+
+    }
+    &__item {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        & icon {
+            fill: white;
+        }
     }
 }

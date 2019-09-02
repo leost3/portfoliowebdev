@@ -1,4 +1,5 @@
 .icon {
+    display: inline-block;
     font-size: 5rem;
     width: 5rem;
     height: 5rem;
@@ -25,7 +26,7 @@
     }
 
     &:hover {
-        transform: rotateY(180deg)
+        // transform: rotateY(180deg)
     }
 }
 
