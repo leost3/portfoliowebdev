@@ -1,30 +1,45 @@
 .about {
     margin-top: -18rem;
-    padding: 30rem 15rem;
+    padding: 25rem 10rem 15rem 10rem;
     background: $color-grey-light-1;
     text-align: center;
     border-bottom: 2px solid $color-grey-light-3;
-    z-index: 5;
+    // z-index: 5;\
+    @include respond(tab-land) {
+        padding: 25rem 0rem;
+    }
+    
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    
     &__box {
         width: 50%;
+        // background: orange;
+
+        
+
+        @include respond(tab-land) {
+            width: 80%;
+        }
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 
     &__text {
-        padding:5rem;
+        padding:1rem;
         // background: red;
 
     }
     &__skills {
-        width: 70%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         padding: 2rem 4rem;
+        // background: orangered;
         &-stacks {
             display: flex;
 
@@ -44,7 +59,7 @@
             border-radius: 3px;
             
             &:not(:last-child) {
-                margin-right: 2rem;
+                margin-right: 4rem;
             }
 
             &:hover {
@@ -65,35 +80,62 @@
 
 .projects {
     // border-top: 2px solid $color-grey-light-3;
-    padding: 20rem 27rem;
-    background: $color-grey-light-2;
+    padding: 12rem 25rem;
+    // background: $color-grey-light-2;
+    // background: black;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     border-bottom: 2px solid $color-grey-light-3;
+    
+    @include respond(phone) {
+        // background: navy;
+
+        padding:none;
+    }
+    
+    @include respond(tab-land) {
+        padding:15rem 7.5rem;
+    }
+
 
     &-cards-container {
         border-radius: 15px;
         border: transparent;
         box-shadow: 0 10px 10px rgba($color-black, 0.5);
-        display: flex;   
+        // background: orange; 
+        margin: 0 auto;
+        display: flex;
+        width: 100%;
+
+        @include respond(tab-land) {
+            display: block;
+            border-radius: 5px;
+            padding: 0rem;
+        }
+    
     }
 
     &-card {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         border-left: 20px solid $color-terciary-dark;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         position: relative;
-        height: 400px;     
+        height: 400px;   
+        width: 100%;  
         flex: 0.5;
+        // background: blue;
+
+        @include respond(tab-land) {
+            border-left: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+     
+        }
 
         &:hover .projects-card-github {
             transform: translateX(0);
             opacity: 1;
-
         }
 
         &-image {
@@ -101,8 +143,10 @@
             width: 100%;
             height: 100%;
             padding: 2rem;
-            box-shadow: 0 2px 10px rgba($color-black, 0.5);
+            flex: 1;
+            // box-shadow: 0 2px 10px rgba($color-black, 0.5);
             border-radius: 2px;
+            // background: orangered;
 
             & .main {
                 display: block;
@@ -114,10 +158,20 @@
 
         &-icons {
             display: flex;
-            margin: 0 auto;
+            // margin: 0 auto;
             width: 100%;
-            padding: 4rem;
+            padding: 2rem;
+            // background: $color-terciary-dark;
+            @include respond(tab-land) {
+                padding: 1rem;     
+            }
             
+            @include respond(tab-port) {
+                border-bottom: 1px solid grey;
+                flex-wrap: wrap;     
+            }
+
+
             .icon {
                 margin: 0 auto;
             }
@@ -133,7 +187,7 @@
             top: 0%;
             left: 0%;
             transform: translateX(-50%,-50%);
-            height: 70%;
+            height: 73%;
             width: 100%;
             background: rgba($color-white,0.8);
             transform: translateX(-100%);
@@ -154,11 +208,23 @@
     &-textbox {
         display: flex;
         flex-direction: column;
+        justify-content: start;
         padding: 2rem 5rem;
         flex: 0.5;
         border-right: 20px solid $color-terciary-dark;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px; 
+        // background: pink;
+
+        & .heading-quartiary {
+            margin-bottom: 0;
+        }
+
+        @include respond(tab-land) {
+            border-right: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
     }
 }
 
@@ -167,41 +233,51 @@
     text-align: center;
     background: $color-grey-light-1;
     border-bottom: 2px solid $color-grey-light-3;
+    @include respond(tab-land) {
+        padding:  10rem 7rem;
+    }
 
     &__icons {
         display: flex;
 
+        @include respond(tab-land) {
+            // flex-direction: column;
+            flex-wrap: wrap;
+        }
+        @include respond(phone) {
+            // flex-direction: column;
+            flex-wrap: none;
+            flex-direction: column;
+        }
+
         &--container {
+            // background: blue;
+
             padding: 2rem;
-            width: 100%;
-            height: 100%;
-            float: left;
-            -webkit-shape-outside: circle(50% at 50% 50%);
-            shape-outside: circle(50% at 50% 50%);
-            -webkit-clip-path: circle(50% at 50% 50%);
-            clip-path: circle(50% at 50% 50%);
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
         }
         &--container.gmail {
-            border:5px solid red;
+            // border:5px solid red;
             & p {
                 color: red;
             }
         }
         &--container.facebook {
-            border:5px solid $color-facebook;
+            // border:5px solid $color-facebook;
             
             & p {
                 color: $color-facebook;
             }
         }
         &--container.twitter {
-            border:5px solid $color-twitter; 
+            // border:5px solid $color-twitter; 
             & p {
                 color: $color-twitter;
             }       }
         &--container.linkedin {
-            border:5px solid $color-linkedin;   
+            // border:5px solid $color-linkedin;   
             & p {
                 color: $color-linkedin;
             }     }
@@ -214,9 +290,16 @@
     text-align: center;
     border-bottom: 2px solid $color-grey-light-3;
 
+    @include respond(tab-port) {
+        padding: 10rem 5rem;
+    }
+
 
     & .paragraph.light {
         text-align: start;
+        @include respond(tab-port) {
+            text-align: center;
+        }
     }
     & .paragraph.paragraph__about.u-margin-bottom-small {
         text-align: start;
@@ -224,6 +307,10 @@
     &__container {
         display: flex;
 
+        @include respond(tab-port) {
+            display: block;
+            text-align: center;
+        }
         &-hi {
             // padding: 5rem;
             flex: 1;
@@ -232,6 +319,10 @@
         &-hello {
             flex: 0.3;
             color: $color-grey-light-3;
+            @include respond(tab-port) {
+                // border-top: 1px solid $color-grey-light-2;
+                margin-top: 5rem;
+            }
 
         }
     }
@@ -242,20 +333,29 @@
 
     &__list {
         padding: 5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: baseline;
+        // align-items: baseline;
         height: 100%;
         border-left: 1px solid $color-grey-light-2;
 
+        @include respond(tab-port) {
+            padding: 0;
+            border-left: none;
+            // flex-wrap: wrap;
+        }
+        @include respond(phone) {
+            // flex-wrap: wrap;
+        }
     }
     &__item {
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
-
+        padding: 0;
         & icon {
-            fill: white;
+            margin: 0 auto;
         }
     }
 }

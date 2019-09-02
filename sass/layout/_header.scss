@@ -2,11 +2,16 @@
     height: 94vh;
     background-image:
      url("./img/photo-laptopcel.jpg");
+
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 20rem 0;
+    padding: 10rem 0;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @include respond(tab-land) {
+        padding: 6rem 0;
+    }
         
     &__text-box {
         background: transparent;

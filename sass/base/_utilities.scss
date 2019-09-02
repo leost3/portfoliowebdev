@@ -6,6 +6,10 @@
 }
 .u-margin-bottom-large {
     margin-bottom: 8rem;
+
+    @include respond(tab-land) {
+        margin-bottom: 2rem
+    }
 }
 
 .link {

@@ -6,11 +6,20 @@
     margin: 2rem;
     transition: all .7s;
 
+    
+    
     &.devicon-webpack-plain-wordmark {
         font-size: 5rem;
+        transform: translateY(-2rem);
+
     }
     &.devicon-mysql-plain-wordmark {
         font-size: 5rem;
+        // transform: translateY(-2rem);
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
     }
 
     &.icon-basic-geolocalize-01 {
@@ -25,9 +34,17 @@
         left: 0;
     }
 
-    &:hover {
-        // transform: rotateY(180deg)
+    @include respond(tab-port) {
+        font-size: 3rem;
+        width: 3rem;
+        height: 3rem;
     }
+    @include respond(phone) {
+        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
 }
 
  
