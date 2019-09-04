@@ -12,7 +12,13 @@
     }
 }
 
+
+.u-margin-top {
+    margin-top: 2rem;
+}
+
 .link {
+    display: inline-block;
     text-transform: uppercase;
     color: $color-terciary-dark;
     font-weight: 600;

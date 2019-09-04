@@ -37,6 +37,38 @@
         </li>
       </ul>
     </nav>
+    
+    <div class="navigation__responsive">
+
+        <input type="checkbox" class="navigation__responsive__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__responsive__button">
+            <span class="navigation__responsive__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__responsive__background">&nbsp;</div>
+
+        <nav class="navigation__responsive__nav">
+            <ul class="navigation__responsive__list">
+                <li class="navigation__responsive__list--item">
+                  <a href="#" class="navigation__responsive__link">Home</a>
+                </li>
+                <li class="navigation__responsive__list--item">
+                  <a href="#" class="navigation__responsive__link">About</a>
+                </li>
+                <li class="navigation__responsive__list--item">
+                  <a href="#" class="navigation__responsive__link">Project</a>
+                </li>
+                <li class="navigation__responsive__list--item">
+                  <a href="#" class="navigation__responsive__link">Contact</a>
+                </li>
+                <li class="navigation__responsive__list--item">
+                  <a href="#" class="navigation__responsive__link">About</a>
+                </li>
+              </ul>
+        </nav>
+        
+    </div>
     <header class="header">
       <div class="header__text-box">
         <h1 class="heading-primary">
@@ -143,8 +175,8 @@
                 ><i class="icon devicon-github-plain-wordmark colored"></i
                 ><span class="link">View Source &rarr;</span></a
               >
-              <a class="btn btn__link" href="https://nbastatsapp.netlify.com/"
-                ><i class="icon icon-basic-display" target="_blank"></i
+              <a class="btn btn__link" href="https://nbastatsapp.netlify.com/" target="_blank"
+                ><i class="icon icon-basic-display" ></i
                 ><span class="link">Go to Website Page &rarr;</span></a
               >
             </div>
@@ -159,16 +191,28 @@
           data-aos-easing="ease-in-out"
         >
           <h4 class="heading-quartiary">About this project</h4>
-          <div class="projects-texbox-details">
-            <p class="paragraph">
+          <p class="paragraph">
                 Web application built with vanilla javascript. Lets the user check all the main stats of NBA teams and players as well as last NBA news. User can search and favorite players to check on them later. keeps users up to date as the app is updated daily after every NBA game.  
-            </p>
+          </p>
+          <div class="projects-links">
+              <a
+              class="btn btn__link u-margin-bottom-small"
+              href="https://github.com/leost3/nba_stats_app"
+              target="_blank"
+              ><i class="icon devicon-git-plain colored"></i
+              ><span class="link">View Source &rarr;</span></a
+            >
+            <a class="btn btn__link" href="https://nbastatsapp.netlify.com/" target="_blank"
+              ><i class="icon icon-basic-display" ></i
+              ><span class="link">Go to Website Page &rarr;</span></a
+            >
           </div>
         </div>
       </div>
+    </div>
 
       <h4
-        class="heading-quartiary u-margin-bottom-small "
+        class="heading-quartiary u-margin-bottom-small u-margin-top "
         data-aos="fade-down"
       >
         CROWN CLOTHING
@@ -219,14 +263,25 @@
           data-aos-easing="ease-in-out"
         >
           <h4 class="heading-quartiary u-margin-bottom-large">About this project</h4>
-          <div class="projects-texbox-details">
             <p class="paragraph">
               Full stack e-commerce using React/Redux and Firebase. User can signup and sigin using either google authentication or their email. Lets user look for items and add them to checkout and finally accepts Credit Card purchases via Stripe but payments are not processed.
             </p>
-          </div>
+            <div class="projects-links">
+                <a
+                class="btn btn__link u-margin-bottom-small"
+                href="https://github.com/leost3/crown-clothing"
+                target="_blank"
+                ><i class="icon devicon-git-plain colored"></i
+                ><span class="link">View Source &rarr;</span></a
+              >
+              <a class="btn btn__link" href="https://crclothing-store.herokuapp.com/"
+                ><i class="icon icon-basic-display" target="_blank"></i
+                ><span class="link">Go to Website Page &rarr;</span></a
+              >
+            </div>
         </div>
       </div>
-      <h4 class="heading-quartiary u-margin-bottom-small"
+      <h4 class="heading-quartiary u-margin-bottom-small u-margin-top"
         data-aos="fade-down"
       >
         MOVIES MANIA
@@ -272,22 +327,33 @@
           data-aos-easing="ease-in-out"
         >
           <h4 class="heading-quartiary u-margin-bottom-large">About this project</h4>
-          <div class="projects-texbox-details">
             <p class="paragraph">
               Full Stack app built on pure React and PHP. Users can search for the trend movies, check information like movie description and users ratings as well as add them to their favorite list to check on them whenever they want! </br>
               <span class="info">
                 Log into the website using username and password demo.
               </span>
             </p>
-          </div>
+            <div class="projects-links">
+                <a
+                class="btn btn__link u-margin-bottom-small"
+                href="https://github.com/leost3/moviesmania"
+                target="_blank"
+                ><i class="icon devicon-git-plain colored"></i
+                ><span class="link">View Source &rarr;</span></a
+              >
+              <a class="btn btn__link" href="moviesmania.netlify.com"
+              target="_blank"><i class="icon icon-basic-display" ></i
+                ><span class="link">Go to Website Page &rarr;</span></a
+              >
+            </div>
         </div>
       </div>
-      <h4 class="heading-quartiary u-margin-bottom-small"
+      <h4 class="heading-quartiary u-margin-bottom-small u-margin-top"
         data-aos="fade-down"
       >
       Centro de Orientación Social a Latinoamericanos landing page
       </h4>
-      <div class="projects-cards-container u-margin-bottom-large">
+      <div class="projects-cards-container u-margin-bottom-large ">
         <div class="projects-card" data-aos="fade-right">
           <div class="projects-card-image">
             <img
@@ -328,11 +394,21 @@
           data-aos-easing="ease-in-out"
         >
           <h4 class="heading-quartiary u-margin-bottom-large">About this project</h4>
-          <div class="projects-texbox-details">
             <p class="paragraph">
               Beautiful Landing page built for a non-profit organization called Centro de Orientación Social a Latinoamericanos.
             </p>
-          </div>
+            <div class="projects-links">
+                <a
+                class="btn btn__link u-margin-bottom-small"
+                href="https://github.com/leost3/latincenterlandingpage"
+                target="_blank"
+                ><i class="icon devicon-git-plain colored"></i
+                ><span class="link">View Source &rarr;</span></a
+              >
+              <a class="btn btn__link" href="#"><svg class="icon icon-embed2"><use xlink:href="/css/icons/sprite.svg#icon-embed2"></use></svg></i
+                ><span class="link">Under construction</span></a
+              >
+            </div>
         </div>
       </div>
     </section>
