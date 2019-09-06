@@ -5,9 +5,7 @@
     height: 5rem;
     margin: 2rem;
     transition: all .7s;
-
-    
-    
+  
     &.devicon-webpack-plain-wordmark {
         font-size: 5rem;
         // transform: translateY(-2rem);
@@ -32,6 +30,10 @@
         font-size: 3rem;
         top: -10%;
         left: 0;
+    }
+
+    &.react {
+        fill: blue;
     }
 
     @include respond(tab-port) {

@@ -19,9 +19,12 @@ body {
 
     @include respond(tab-land) {
         font-size: 5em;
+        margin-top: 10rem;
+
     }
     @include respond(phone) {
         font-size: 3.5em;
+        margin-top: 10rem;
     }
 
     &-main {
@@ -66,12 +69,15 @@ body {
     font-weight: 900;
     animation: moveUp 3s;
     letter-spacing: 10px;
-
+    text-align: center;
     @include respond(tab-land) {
         font-size: 2em;
+        margin-top: 7.5rem;
+
     } 
     @include respond(phone) {
         font-size: 1.5em;
+        margin-top: 7.5rem;
     }
 }
 

@@ -16,6 +16,7 @@ ORDER: Base + typograpjy + general layout + grid + page layout > Components
 1em = 16px
 */
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; }
   @media (max-width: 75em) {
     html {
@@ -58,10 +59,12 @@ body {
   letter-spacing: 15px; }
   @media (max-width: 75em) {
     .heading-primary {
-      font-size: 5em; } }
+      font-size: 5em;
+      margin-top: 10rem; } }
   @media (max-width: 37.5em) {
     .heading-primary {
-      font-size: 3.5em; } }
+      font-size: 3.5em;
+      margin-top: 10rem; } }
   .heading-primary-main {
     margin-top: 0%;
     display: block;
@@ -96,13 +99,16 @@ body {
   margin-top: 4rem;
   font-weight: 900;
   animation: moveUp 3s;
-  letter-spacing: 10px; }
+  letter-spacing: 10px;
+  text-align: center; }
   @media (max-width: 75em) {
     .heading-tertiary {
-      font-size: 2em; } }
+      font-size: 2em;
+      margin-top: 7.5rem; } }
   @media (max-width: 37.5em) {
     .heading-tertiary {
-      font-size: 1.5em; } }
+      font-size: 1.5em;
+      margin-top: 7.5rem; } }
 
 .heading-quartiary {
   display: inline-block;
@@ -258,6 +264,10 @@ body {
   @media (max-width: 75em) {
     .header {
       padding: 6rem 0; } }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__text-box {
     background: transparent;
     width: 50%;
@@ -275,6 +285,9 @@ body {
   z-index: 10000;
   width: 100%;
   opacity: .7; }
+  @media (max-width: 37.5em) {
+    .navigation {
+      display: none; } }
   .navigation__list {
     display: flex;
     justify-content: flex-start;
@@ -297,11 +310,15 @@ body {
       color: #fff; }
 
 .navigation__responsive {
-  border: 1px solid black; }
+  border: 1px solid black;
+  display: none; }
+  @media (max-width: 37.5em) {
+    .navigation__responsive {
+      display: block; } }
   .navigation__responsive__nav {
     position: fixed;
-    top: 9.5em;
-    left: 1.65em;
+    top: 2em;
+    left: 5.65rem;
     z-index: 10000;
     opacity: 0;
     width: 0%;
@@ -311,25 +328,28 @@ body {
     width: 6rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
-    left: 6.5rem;
+    top: 2rem;
+    left: 1rem;
     background-image: radial-gradient(#2998ff, #5643fa);
-    z-index: 100000; }
+    z-index: 0; }
   .navigation__responsive__button {
-    background: #fff;
+    border: 1px solid black;
+    background: #2998ff;
     height: 7rem;
     width: 7rem;
     position: fixed;
-    top: 6rem;
-    left: 6rem;
+    top: 1rem;
+    left: 0.5rem;
     border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
     z-index: 200000; }
   .navigation__responsive__checkbox {
     display: none; }
   .navigation__responsive__list {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 0%;
     margin: 0%;
@@ -338,6 +358,7 @@ body {
       width: 100%;
       margin: 0 auto; }
   .navigation__responsive__link:link, .navigation__responsive__link:visited {
+    border: 1px solid black;
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -350,14 +371,45 @@ body {
     background-image: linear-gradient(120deg, #2998ff 0%, transparent 50%, #fff 60%);
     background-size: 220%;
     transition: all 0.7s;
-    width: 100%; }
+    width: 100%;
+    z-index: 1;
+    font-size: 1rem; }
   .navigation__responsive__link:hover, .navigation__responsive__link:active {
     color: #2998ff;
     background-position: 100%;
     transform: translate(0.5rem); }
   .navigation__responsive__checkbox:checked ~ .navigation__responsive__nav {
     opacity: 1;
-    width: 12%; }
+    width: 15rem; }
+  .navigation__responsive__icon {
+    position: relative;
+    margin-top: 3.5rem; }
+    .navigation__responsive__icon, .navigation__responsive__icon::before, .navigation__responsive__icon::after {
+      width: 3rem;
+      height: 2px;
+      background: #fff;
+      display: inline-block; }
+    .navigation__responsive__icon::before, .navigation__responsive__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navigation__responsive__icon::before {
+      top: -0.8rem; }
+    .navigation__responsive__icon::after {
+      top: 0.8rem; }
+  .navigation__responsive__button:hover .navigation__responsive__icon::before {
+    top: -1rem; }
+  .navigation__responsive__button:hover .navigation__responsive__icon::after {
+    top: 1rem; }
+  .navigation__responsive__checkbox:checked + .navigation__responsive__button .navigation__responsive__icon {
+    background-color: transparent; }
+  .navigation__responsive__checkbox:checked + .navigation__responsive__button .navigation__responsive__icon:before {
+    top: 0%;
+    transform: rotate(135deg); }
+  .navigation__responsive__checkbox:checked + .navigation__responsive__button .navigation__responsive__icon:after {
+    top: 0%;
+    transform: rotate(-135deg); }
 
 .about {
   margin-top: -18rem;
@@ -482,7 +534,7 @@ body {
       transform: translateX(-50%, -50%);
       height: 73%;
       width: 100%;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(247, 247, 247, 0.8);
       transform: translateX(-100%);
       transition: all 2s;
       opacity: 0;
@@ -547,54 +599,46 @@ body {
         flex-direction: column; } }
     .connect__icons--container {
       padding: 2rem;
-      margin: 0 auto;
+      margin: 2rem auto;
       display: flex;
-      flex-direction: column; }
-    .connect__icons--container.gmail {
-      border: 5px solid #DD4B39;
-      border-radius: 10px; }
-      .connect__icons--container.gmail p {
-        color: #DD4B39; }
-      .connect__icons--container.gmail:hover {
-        background: #DD4B39; }
-        .connect__icons--container.gmail:hover p {
-          color: white; }
-        .connect__icons--container.gmail:hover .icon {
-          background: white;
-          border: 1px solid black; }
-    .connect__icons--container.facebook {
-      border: 5px solid #4267b2;
-      border-radius: 10px; }
-      .connect__icons--container.facebook p {
-        color: #4267b2; }
-      .connect__icons--container.facebook:hover {
-        background: #4267b2; }
-        .connect__icons--container.facebook:hover p {
-          color: white; }
-    .connect__icons--container.twitter {
-      border: 5px solid #1da1f2;
-      border-radius: 10px; }
-      .connect__icons--container.twitter p {
-        color: #1da1f2; }
-      .connect__icons--container.twitter:hover {
-        background: #1da1f2; }
-        .connect__icons--container.twitter:hover p {
-          color: white; }
-        .connect__icons--container.twitter:hover .icon {
-          border: 1px solid black; }
-    .connect__icons--container.linkedin {
-      border: 5px solid #283e4a;
-      border-radius: 10px; }
-      .connect__icons--container.linkedin p {
-        color: #283e4a; }
-      .connect__icons--container.linkedin:hover {
-        background: #283e4a; }
-        .connect__icons--container.linkedin:hover p {
-          color: white; }
+      flex-direction: column;
+      min-width: 20rem; }
+      .connect__icons--container.gmail {
+        border: 5px solid #DD4B39;
+        border-radius: 10px; }
+        .connect__icons--container.gmail p {
+          color: #DD4B39; }
+      .connect__icons--container.facebook {
+        border: 5px solid #4267b2;
+        border-radius: 10px; }
+        .connect__icons--container.facebook p {
+          color: #4267b2; }
+        .connect__icons--container.facebook:hover {
+          background: #1da1f2; }
+          .connect__icons--container.facebook:hover p {
+            color: white; }
+      .connect__icons--container.twitter {
+        border: 5px solid #1da1f2;
+        border-radius: 10px; }
+        .connect__icons--container.twitter p {
+          color: #1da1f2; }
+        .connect__icons--container.twitter:hover {
+          background: #4267b2; }
+          .connect__icons--container.twitter:hover p {
+            color: white; }
+      .connect__icons--container.linkedin {
+        border: 5px solid #283e4a;
+        border-radius: 10px; }
+        .connect__icons--container.linkedin p {
+          color: #283e4a; }
+        .connect__icons--container.linkedin:hover {
+          background: #283e4a; }
+          .connect__icons--container.linkedin:hover p {
+            color: white; }
 
 .aboutme {
-  padding: 10rem;
-  background: #484848;
+  padding: 10rem 10rem 5rem 10rem;
+  background: #777;
   text-align: center;
   border-bottom: 2px solid #d6d6d6; }
   @media (max-width: 56.25em) {
