@@ -23,7 +23,7 @@ body {
 
     }
     @include respond(phone) {
-        font-size: 3.5em;
+        font-size: 2.5em;
         margin-top: 10rem;
     }
 
@@ -93,6 +93,10 @@ body {
     @include respond(tab-land) {
         font-size: 2rem;
     }
+
+    @include respond(tab-land) {
+        font-size: 1rem;
+    }
 }
 
 
@@ -103,6 +107,10 @@ body {
     font-family: "lato";
     font-size: 1.4rem;
     letter-spacing: 2px;
+    
+    @include respond(phone) {
+        font-size: 1rem;
+    }
 
     &__skills {
         color: $color-terciary-dark;

@@ -98,6 +98,11 @@
         padding: 0%;
         margin: 0%;
         width: 100%;
+
+        @include respond(phone) {
+            flex-wrap: wrap;
+        }
+    
         
         &--item {
             width: 100%;

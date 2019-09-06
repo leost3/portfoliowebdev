@@ -40,13 +40,17 @@
         flex-direction: column;
         padding: 2rem 4rem;
         // background: orangered;
-        &-stacks {
-            display: flex;
-
-            // padding: 5rem 5rem;
-            // background: yellow;
-            
+        
+        @include respond(phone) {
+            padding: 0.5rem;
         }
+        
+        
+        &-stacks {
+            display: flex;           
+        }
+
+
         &-stack {
             width: 100%;
             border: 1px solid $color-grey-light-3;
@@ -57,7 +61,8 @@
             transition: all 0.6s;
             background: $color-grey-light-2;
             border-radius: 3px;
-            
+
+           
             &:not(:last-child) {
                 margin-right: 4rem;
             }
@@ -70,6 +75,18 @@
             &__icons {
                 display: flex;
                 flex-wrap: wrap;
+
+                & .icon {
+                    margin: 0;
+                }
+            }
+
+            @include respond(phone) {
+                padding: 0%;
+
+                &:not(:last-child) {
+                    margin-right: 0rem;
+                }
             }
 
         }
@@ -86,16 +103,16 @@
     text-align: center;
     border-bottom: 2px solid $color-grey-light-3;
     
-    @include respond(phone) {
-        // background: navy;
-
-        padding:none;
-    }
+    
     
     @include respond(tab-land) {
         padding:15rem 7.5rem;
     }
-
+    
+    @include respond(phone) {
+        
+        padding: 12rem 2rem;
+    }
 
     &-cards-container {
         border-radius: 15px;
@@ -147,6 +164,9 @@
             // box-shadow: 0 2px 10px rgba($color-black, 0.5);
             border-radius: 2px;
             // background: orangered;
+            @include respond(phone) {
+                padding: 0.5rem;
+            }
 
             & .main {
                 display: block;
@@ -233,6 +253,10 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
         }
+
+        @include respond(tab-land) {
+            padding: 1rem;
+        }
     }
 
     &-links {
@@ -284,6 +308,11 @@
             display: flex;
             flex-direction: column;
             min-width: 20rem;
+
+            @include respond(phone) {
+                min-width: 15rem;
+            }
+        
 
             &.gmail {
                 border:5px solid #DD4B39;
