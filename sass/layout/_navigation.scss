@@ -7,6 +7,17 @@
     z-index: 10000;
     width: 100%;
     opacity: .7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__logo {
+        width: 5%;
+        & img {
+            display: block;
+            width: 100%;
+        }   
+    }
 
     @include respond(phone) {
         display: none;
@@ -17,6 +28,7 @@
         justify-content: flex-start;
         padding: 0%;
         margin: 0%;
+        height: 100%;
         &--item {
             background: white;
             &:not(:first-child) {
@@ -33,6 +45,8 @@
         transition: all 0.51s;
         font-weight: 700;
         color: $color-terciary-dark;
+        height: 100%;
+        flex-grow: 1;
 
         &:hover {
             background: $color-terciary-light;

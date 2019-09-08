@@ -296,7 +296,15 @@ body {
   left: 0%;
   z-index: 10000;
   width: 100%;
-  opacity: .7; }
+  opacity: .7;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .navigation__logo {
+    width: 5%; }
+    .navigation__logo img {
+      display: block;
+      width: 100%; }
   @media (max-width: 37.5em) {
     .navigation {
       display: none; } }
@@ -304,7 +312,8 @@ body {
     display: flex;
     justify-content: flex-start;
     padding: 0%;
-    margin: 0%; }
+    margin: 0%;
+    height: 100%; }
     .navigation__list--item {
       background: white; }
       .navigation__list--item:not(:first-child) {
@@ -316,7 +325,9 @@ body {
     padding: 1rem 2rem;
     transition: all 0.51s;
     font-weight: 700;
-    color: #5643fa; }
+    color: #5643fa;
+    height: 100%;
+    flex-grow: 1; }
     .navigation__link:hover {
       background: #2998ff;
       color: #fff; }
