@@ -5,8 +5,12 @@
     text-align: center;
     border-bottom: 2px solid $color-grey-light-3;
     // z-index: 5;\
+
     @include respond(tab-land) {
         padding: 25rem 0rem;
+    }
+    @include respond(phone) {
+        padding: 25rem 0rem 10rem 0rem;
     }
     
     &__container {
@@ -111,7 +115,7 @@
     
     @include respond(phone) {
         
-        padding: 12rem 2rem;
+        padding: 10rem 2rem;
     }
 
     &-cards-container {
@@ -210,9 +214,9 @@
             height: 73%;
             width: 100%;
             background: rgba($color-grey-light-1,0.8);
-            transform: translateX(-100%);
+            // transform: translateX(-100%);
             transition: all 2s;
-            opacity: 0;
+            // opacity: 0;
             border-radius: 2px;
             
             @include respond(tab-port) {
@@ -226,7 +230,13 @@
                 transform: translate(-50%,-50%);
                 width: 100%;
                 display: flex;
-                margin-top: auto;
+                justify-content: center;
+
+                .svg {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0;
+                }   
             }
         }
     }
@@ -269,8 +279,9 @@
         .btn {
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: baseline;
+            align-items: center;
         }
         @include respond(tab-port) {
             display: block;
@@ -286,9 +297,13 @@
     @include respond(tab-land) {
         padding:  10rem 7rem;
     }
+    @include respond(phone) {
+        padding:  7rem 7rem;
+    }
 
     &__icons {
         display: flex;
+        flex-wrap: wrap;
 
         @include respond(tab-land) {
             // flex-direction: column;
@@ -368,6 +383,21 @@
                     }
                 }
               }
+            &.github {
+                border:5px solid $color-black;   
+                border-radius: 10px;
+    
+                & p {
+                    color: $color-black;
+                }   
+             &:hover {
+                    background: $color-linkedin;
+    
+                    & p {
+                        color: white;
+                    }
+                }
+              }
         }
     }
 }
@@ -381,8 +411,13 @@
     @include respond(tab-port) {
         padding: 10rem 5rem;
     }
+    @include respond(phone) {
+        padding: 10rem 1rem;
+    }
 
-
+    & .heading-secondary {
+        color: $color-white;
+    }
     & .paragraph.light {
         text-align: start;
         @include respond(tab-port) {
@@ -403,10 +438,30 @@
             // padding: 5rem;
             flex: 1;
             margin-right: 3rem;
+
+            & .paragraph.paragraph__about {
+                color: $color-terciary-light;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            
+            @include respond(phone) {
+                margin-right: 0;
+            }
+            
         }
         &-hello {
             flex: 0.3;
             color: $color-grey-light-3;
+
+
+            & .paragraph.paragraph__about {
+                color: $color-terciary-light;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+
             @include respond(tab-port) {
                 // border-top: 1px solid $color-grey-light-2;
                 margin-top: 5rem;
@@ -420,23 +475,33 @@
     }
 
     &__list {
-        padding: 5rem;
-
+        padding:0 5rem;
         height: 100%;
         border-left: 1px solid $color-grey-light-2;
 
         @include respond(tab-port) {
-            padding: 0;
             border-left: none;
+            display: flex;
+            flex-wrap: wrap;
+            // justify-content: center;        
+            
         }
         @include respond(phone) {
+            padding: 0;
         }
     }
     &__item {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 2rem;
         padding: 0;
+        & * {
+            display: inline-block;
+        }
+        // @include respond(phone) {
+        //     align-items: baseline;
+        // }
         & icon {
             margin: 0 auto;
         }

@@ -134,7 +134,9 @@ body {
   letter-spacing: 2px; }
   @media (max-width: 37.5em) {
     .paragraph {
-      font-size: 1rem; } }
+      font-size: 1rem;
+      letter-spacing: 0;
+      margin-top: 1rem; } }
   .paragraph__skills {
     color: #5643fa;
     text-transform: uppercase; }
@@ -180,7 +182,7 @@ body {
   line-height: 20px; }
 
 .info {
-  color: red; }
+  color: #5643fa; }
 
 @keyframes moveRight {
   0% {
@@ -263,7 +265,8 @@ body {
 
 .header {
   height: 94vh;
-  background-image: url("./img/photo-laptopcel.jpg");
+  background-image: url("./img/photo-background-programming.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10rem 0;
@@ -431,6 +434,9 @@ body {
   @media (max-width: 75em) {
     .about {
       padding: 25rem 0rem; } }
+  @media (max-width: 37.5em) {
+    .about {
+      padding: 25rem 0rem 10rem 0rem; } }
   .about__container {
     display: flex;
     flex-direction: column;
@@ -490,7 +496,7 @@ body {
       padding: 15rem 7.5rem; } }
   @media (max-width: 37.5em) {
     .projects {
-      padding: 12rem 2rem; } }
+      padding: 10rem 2rem; } }
   .projects-cards-container {
     border-radius: 15px;
     border: transparent;
@@ -559,9 +565,7 @@ body {
       height: 73%;
       width: 100%;
       background: rgba(247, 247, 247, 0.8);
-      transform: translateX(-100%);
       transition: all 2s;
-      opacity: 0;
       border-radius: 2px; }
       @media (max-width: 56.25em) {
         .projects-card-github {
@@ -573,7 +577,11 @@ body {
         transform: translate(-50%, -50%);
         width: 100%;
         display: flex;
-        margin-top: auto; }
+        justify-content: center; }
+        .projects-card-github .btn__container .svg {
+          display: flex;
+          flex-direction: column;
+          margin: 0; }
   .projects-textbox {
     display: flex;
     flex-direction: column;
@@ -601,8 +609,9 @@ body {
     .projects-links .btn {
       margin: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: baseline; }
+      align-items: center; }
     @media (max-width: 56.25em) {
       .projects-links {
         display: block; } }
@@ -615,8 +624,12 @@ body {
   @media (max-width: 75em) {
     .connect {
       padding: 10rem 7rem; } }
+  @media (max-width: 37.5em) {
+    .connect {
+      padding: 7rem 7rem; } }
   .connect__icons {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
     @media (max-width: 75em) {
       .connect__icons {
         flex-wrap: wrap; } }
@@ -665,6 +678,15 @@ body {
           background: #283e4a; }
           .connect__icons--container.linkedin:hover p {
             color: white; }
+      .connect__icons--container.github {
+        border: 5px solid #000;
+        border-radius: 10px; }
+        .connect__icons--container.github p {
+          color: #000; }
+        .connect__icons--container.github:hover {
+          background: #283e4a; }
+          .connect__icons--container.github:hover p {
+            color: white; }
 
 .aboutme {
   padding: 10rem 10rem 5rem 10rem;
@@ -674,6 +696,11 @@ body {
   @media (max-width: 56.25em) {
     .aboutme {
       padding: 10rem 5rem; } }
+  @media (max-width: 37.5em) {
+    .aboutme {
+      padding: 10rem 1rem; } }
+  .aboutme .heading-secondary {
+    color: #fff; }
   .aboutme .paragraph.light {
     text-align: start; }
     @media (max-width: 56.25em) {
@@ -690,26 +717,44 @@ body {
     .aboutme__container-hi {
       flex: 1;
       margin-right: 3rem; }
+      .aboutme__container-hi .paragraph.paragraph__about {
+        color: #2998ff;
+        font-size: 2rem;
+        font-weight: 600; }
+      @media (max-width: 37.5em) {
+        .aboutme__container-hi {
+          margin-right: 0; } }
     .aboutme__container-hello {
       flex: 0.3;
       color: #d6d6d6; }
+      .aboutme__container-hello .paragraph.paragraph__about {
+        color: #2998ff;
+        font-size: 2rem;
+        font-weight: 600; }
       @media (max-width: 56.25em) {
         .aboutme__container-hello {
           margin-top: 5rem; } }
   .aboutme .icon {
     color: #fff; }
   .aboutme__list {
-    padding: 5rem;
+    padding: 0 5rem;
     height: 100%;
     border-left: 1px solid #eee; }
     @media (max-width: 56.25em) {
       .aboutme__list {
-        padding: 0;
-        border-left: none; } }
+        border-left: none;
+        display: flex;
+        flex-wrap: wrap; } }
+    @media (max-width: 37.5em) {
+      .aboutme__list {
+        padding: 0; } }
   .aboutme__item {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 2rem;
     padding: 0; }
+    .aboutme__item * {
+      display: inline-block; }
     .aboutme__item icon {
       margin: 0 auto; }
