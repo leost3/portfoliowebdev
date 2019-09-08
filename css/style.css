@@ -156,8 +156,11 @@ body {
   color: #d6d6d6;
   font-weight: 900;
   font-family: "lato";
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   letter-spacing: 2px; }
+  @media (max-width: 37.5em) {
+    .heading-footer {
+      font-size: 1.2rem; } }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
@@ -247,21 +250,19 @@ body {
     left: 0; }
   .icon.react {
     fill: blue; }
-  @media (max-width: 56.25em) {
-    .icon {
-      font-size: 3rem;
-      width: 3rem;
-      height: 3rem; } }
   @media (max-width: 37.5em) {
     .icon {
-      font-size: 2.5rem;
-      width: 2.5rem;
-      height: 2.5rem; } }
+      font-size: 3.5rem;
+      width: 3.5rem;
+      height: 3.5rem; } }
 
 .footer {
   padding: 2rem;
   background: #111;
   text-align: center; }
+  @media (max-width: 37.5em) {
+    .footer {
+      padding: 1rem; } }
 
 .header {
   height: 94vh;
@@ -458,14 +459,18 @@ body {
     padding: 2rem 4rem; }
     @media (max-width: 37.5em) {
       .about__skills {
-        padding: 0.5rem; } }
+        padding: 0.5rem; }
+        .about__skills p {
+          margin: 0; } }
     .about__skills-stacks {
       display: flex; }
+      @media (max-width: 37.5em) {
+        .about__skills-stacks {
+          flex-direction: column; } }
     .about__skills-stack {
       width: 100%;
       border: 1px solid #d6d6d6;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-      padding: 1rem 0rem;
       display: flex;
       flex-direction: column;
       transition: all 0.6s;
@@ -490,7 +495,8 @@ body {
 .projects {
   padding: 12rem 25rem;
   text-align: center;
-  border-bottom: 2px solid #d6d6d6; }
+  border-bottom: 2px solid #d6d6d6;
+  overflow-x: hidden; }
   @media (max-width: 75em) {
     .projects {
       padding: 15rem 7.5rem; } }
@@ -502,8 +508,7 @@ body {
     border: transparent;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
-    display: flex;
-    width: 100%; }
+    display: flex; }
     @media (max-width: 75em) {
       .projects-cards-container {
         display: block;
@@ -565,7 +570,9 @@ body {
       height: 73%;
       width: 100%;
       background: rgba(247, 247, 247, 0.8);
+      transform: translateX(-100%);
       transition: all 2s;
+      opacity: 0;
       border-radius: 2px; }
       @media (max-width: 56.25em) {
         .projects-card-github {
@@ -605,7 +612,8 @@ body {
     display: none;
     font-size: 1rem; }
     .projects-links .icon {
-      font-size: 2rem; }
+      font-size: 3rem;
+      margin: 1.5rem; }
     .projects-links .btn {
       margin: 0;
       display: flex;
@@ -689,7 +697,7 @@ body {
             color: white; }
 
 .aboutme {
-  padding: 10rem 10rem 5rem 10rem;
+  padding: 10rem 10rem 5rem 5rem;
   background: #777;
   text-align: center;
   border-bottom: 2px solid #d6d6d6; }
@@ -738,13 +746,14 @@ body {
     color: #fff; }
   .aboutme__list {
     padding: 0 5rem;
-    height: 100%;
+    height: 80%;
     border-left: 1px solid #eee; }
     @media (max-width: 56.25em) {
       .aboutme__list {
         border-left: none;
         display: flex;
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        justify-content: center; } }
     @media (max-width: 37.5em) {
       .aboutme__list {
         padding: 0; } }

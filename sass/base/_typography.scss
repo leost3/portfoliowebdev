@@ -142,7 +142,11 @@ body {
     color: $color-grey-light-3;
     font-weight: 900;
     font-family: "lato";
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
+
+    @include respond(phone) {
+        font-size: 1.2rem;
+    }
 }
 

@@ -2,4 +2,8 @@
     padding: 2rem;
     background: #111;
     text-align: center;
+
+    @include respond(phone) {
+        padding: 1rem;
+    }
 }
