@@ -144,16 +144,18 @@
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         position: relative;
-        height: 400px;   
+        height: 35rem;   
         width: 100%;  
         flex: 0.5;
-        // background: blue;
 
         @include respond(tab-land) {
             border-left: none;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
-     
+            height: 35em;
+        }
+        @include respond(phone) {
+            height: 25rem;
         }
 
         &:hover .projects-card-github {
@@ -219,7 +221,7 @@
             opacity: 0;
             border-radius: 2px;
             
-            @include respond(tab-port) {
+            @include respond(tab-land) {
                 display: none;
             }
 
@@ -245,15 +247,13 @@
         display: flex;
         flex-direction: column;
         justify-content: start;
-        padding: 2rem 5rem;
+        padding: 2rem 2rem;
         flex: 0.5;
         border-right: 20px solid $color-terciary-dark;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px; 
-        // background: pink;
+        min-height: 30rem;
 
-
-        
         & .heading-quartiary {
             margin-bottom: 0;
         }
@@ -284,8 +284,9 @@
             justify-content: center;
             align-items: center;
         }
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             display: block;
+            
         }
     }
 }
