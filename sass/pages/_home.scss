@@ -10,7 +10,7 @@
         padding: 25rem 0rem;
     }
     @include respond(phone) {
-        padding: 25rem 0rem 10rem 0rem;
+        padding: 22rem 0rem 5rem 0rem;
     }
     
     &__container {
@@ -45,7 +45,7 @@
         padding: 2rem 4rem;
         
         @include respond(phone) {
-            padding: 0.5rem;
+            padding: 1.5rem;
 
             & p {
                 margin: 0;
@@ -58,6 +58,7 @@
             @include respond(phone) {
                 flex-direction: column;
             }
+            
         }
 
 
@@ -82,23 +83,41 @@
                 border-bottom: 1rem solid $color-terciary-dark;
             }
              
-            &__icons {
-                display: flex;
-                flex-wrap: wrap;
-
-                & .icon {
-                    margin: 0;
-                }
-            }
+            
 
             @include respond(phone) {
                 padding: 0%;
+                margin-bottom: 2rem;
 
                 &:not(:last-child) {
                     margin-right: 0rem;
                 }
             }
 
+        }
+
+        &--stack__icons {
+            padding-bottom: 2.4rem;;
+        }
+    }
+
+    .language--box {
+        display: inline-block;
+    }
+
+    .language--container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & .icon {
+            margin-bottom: 1.5rem;
+        }
+        & p {
+            font-weight: 600;
+            font-size: 15px;
         }
     }
 
@@ -117,7 +136,7 @@
     
     @include respond(phone) {
         
-        padding: 10rem 2rem;
+        padding: 5rem 1.5rem;
     }
 
     &-cards-container {
@@ -148,14 +167,25 @@
         width: 100%;  
         flex: 0.5;
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             border-left: none;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
-            height: 35em;
+            height: 30em;
         }
         @include respond(phone) {
             height: 25rem;
+        }
+
+        &.moviemania {
+            @include respond(phone) {
+                height: 20rem;
+            } 
+        }
+        &.crown-clothing {
+            @include respond(phone) {
+                height: 20rem;
+            } 
         }
 
         &:hover .projects-card-github {
@@ -300,7 +330,7 @@
         padding:  10rem 7rem;
     }
     @include respond(phone) {
-        padding:  7rem 7rem;
+        padding:  5rem 7rem;
     }
 
     &__icons {
@@ -325,7 +355,7 @@
             min-width: 20rem;
 
             @include respond(phone) {
-                min-width: 15rem;
+                min-width: 5rem;
             }
         
 
@@ -412,7 +442,7 @@
         padding: 10rem 5rem;
     }
     @include respond(phone) {
-        padding: 10rem 1rem;
+        padding: 5rem 1rem;
     }
 
     & .heading-secondary {

@@ -30,3 +30,7 @@ li {
 body {
     position: relative;
 }
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}

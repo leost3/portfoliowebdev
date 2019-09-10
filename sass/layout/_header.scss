@@ -1,8 +1,12 @@
 .header {
     height: 94vh;
-    background-image:
-    //  url("./img/photo-laptopcel.jpg");
-     url("./img/photo-background-programming.jpg");
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),url("./img/photo-background-programming.jpg");
+    // background-image: url("./img/photo-background-programming.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,7 +22,20 @@
         clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
+    &::after {
+        content: "";
+        background-image: url("./img/photo-background-programming.jpg");
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
     }
+    }
+
+
         
     &__text-box {
         background: transparent;
