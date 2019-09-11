@@ -96,9 +96,9 @@
 
         }
 
-        &--stack__icons {
-            padding-bottom: 2.4rem;;
-        }
+        // &--stack__icons {
+        //     padding-bottom: 2.4rem;;
+        // }
     }
 
     .language--box {
@@ -118,6 +118,7 @@
         & p {
             font-weight: 600;
             font-size: 15px;
+            color: $color-grey-light-2;
         }
     }
 
@@ -365,24 +366,17 @@
                 & p {
                     color: #DD4B39;
                 }
-    
-            }
-            &.facebook {
-                border:5px solid $color-facebook;
-                border-radius: 10px;
-    
-                & p {
-                    color: $color-facebook;
-                }
-    
+
                 &:hover {
-                    background: $color-twitter;
+                    background: rgb(180, 95, 95);
     
                     & p {
                         color: white;
                     }
                 }
+    
             }
+       
             &.twitter {
                 border:5px solid $color-twitter; 
                 border-radius: 10px;

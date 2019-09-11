@@ -1,6 +1,8 @@
 .navigation {
-    background: white;
-    padding: 0%;
+    // background: white;
+    background-image: radial-gradient($color-terciary-light, $color-terciary-dark);
+
+    padding: 1rem;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -10,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-
+    border-bottom: 1px solid $color-grey-light-1;
     &__logo {
         width: 5%;
         & img {
@@ -31,9 +33,11 @@
         height: 100%;
         &--item {
             background: white;
-            &:not(:first-child) {
-                margin: 0 2px;
-            }
+            margin: 0 2px;
+        }
+
+        @include respond(tab-port) {
+            font-size: 12px;
         }
     }
 
@@ -46,7 +50,7 @@
         font-weight: 700;
         color: $color-terciary-dark;
         height: 100%;
-        flex-grow: 1;
+        // flex-grow: 1;
 
         &:hover {
             background: $color-terciary-light;

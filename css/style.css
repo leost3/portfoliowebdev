@@ -180,6 +180,9 @@ body {
 .u-margin-top {
   margin-top: 4rem; }
 
+.u-margin-top-small {
+  margin-top: 2rem; }
+
 .link {
   display: inline-block;
   text-transform: uppercase;
@@ -302,8 +305,8 @@ body {
     margin: 0 auto; }
 
 .navigation {
-  background: white;
-  padding: 0%;
+  background-image: radial-gradient(#2998ff, #5643fa);
+  padding: 1rem;
   position: fixed;
   top: 0%;
   left: 0%;
@@ -312,7 +315,8 @@ body {
   opacity: .7;
   display: flex;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  border-bottom: 1px solid #f7f7f7; }
   .navigation__logo {
     width: 5%; }
     .navigation__logo img {
@@ -328,9 +332,11 @@ body {
     margin: 0%;
     height: 100%; }
     .navigation__list--item {
-      background: white; }
-      .navigation__list--item:not(:first-child) {
-        margin: 0 2px; }
+      background: white;
+      margin: 0 2px; }
+    @media (max-width: 56.25em) {
+      .navigation__list {
+        font-size: 12px; } }
   .navigation__link {
     text-decoration: none;
     text-transform: uppercase;
@@ -339,8 +345,7 @@ body {
     transition: all 0.51s;
     font-weight: 700;
     color: #5643fa;
-    height: 100%;
-    flex-grow: 1; }
+    height: 100%; }
     .navigation__link:hover {
       background: #2998ff;
       color: #fff; }
@@ -511,8 +516,6 @@ body {
           margin-bottom: 2rem; }
           .about__skills-stack:not(:last-child) {
             margin-right: 0rem; } }
-    .about__skills--stack__icons {
-      padding-bottom: 2.4rem; }
   .about .language--box {
     display: inline-block; }
   .about .language--container {
@@ -525,7 +528,8 @@ body {
       margin-bottom: 1.5rem; }
     .about .language--container p {
       font-weight: 600;
-      font-size: 15px; }
+      font-size: 15px;
+      color: #eee; }
 
 .projects {
   padding: 12rem 25rem;
@@ -705,14 +709,9 @@ body {
         border-radius: 10px; }
         .connect__icons--container.gmail p {
           color: #DD4B39; }
-      .connect__icons--container.facebook {
-        border: 5px solid #4267b2;
-        border-radius: 10px; }
-        .connect__icons--container.facebook p {
-          color: #4267b2; }
-        .connect__icons--container.facebook:hover {
-          background: #1da1f2; }
-          .connect__icons--container.facebook:hover p {
+        .connect__icons--container.gmail:hover {
+          background: #b45f5f; }
+          .connect__icons--container.gmail:hover p {
             color: white; }
       .connect__icons--container.twitter {
         border: 5px solid #1da1f2;
